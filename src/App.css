@@ -1,0 +1,22 @@
+.App{
+   margin: 0 auto;
+   display: grid;
+   grid-template-areas: 
+   "h h h"
+   ". c ."
+   ;
+   min-height: 100vh;
+   grid-template-rows: 0.5fr 9,5fr;
+   grid-template-columns: 1fr 10fr 1fr;
+}
+
+.header{
+   grid-area: h;
+   background-color: black;
+   height: 5vh;
+}
+.content{
+   grid-area: c;
+   background-color: #CCCCCC;
+   min-height: 95vh;
+}

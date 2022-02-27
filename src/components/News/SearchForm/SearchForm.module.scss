@@ -1,0 +1,37 @@
+.searchForm{
+   display: grid;
+   grid-template-areas: ". f ." ;
+   grid-template-columns: 1fr 5fr 1fr;
+   min-height: 5vh;
+   .form{
+      background-color: white;;
+      grid-area: f;
+      display: grid;
+      grid-template-areas: "i b";
+      grid-template-columns: 10fr 1fr;
+      overflow: hidden;
+      .lupa_wrapper{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         &:hover{
+            background-color: #cccccc;
+         }
+      .lupa{
+         height: 20px;
+         width: 20px;
+         grid-area: b;
+   }}
+      .input{
+         display: flex;
+         align-items: center;
+         border: none;
+         outline: none;
+         height: 100%;
+         width: 100%;
+         grid-area: i;
+         font-size: 20px;
+   }
+}
+}
+ 

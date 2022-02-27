@@ -1,0 +1,46 @@
+
+.new{
+   display: grid;
+   grid-template-areas: 
+   "l r"
+   "l r";
+   grid-template-columns: 1fr 1.5fr;
+   background-color: white;
+   margin: 10px;
+      .left{
+         grid-area: "l";
+         .img{
+            width: 100%;
+            height: 100%;
+         }
+      }
+      .right{
+         grid-area: "r";
+         display: grid;
+         grid-template-areas: 
+         't t'
+         'd d'
+         ;
+         grid-template-rows: 1fr 3fr;
+         .title{
+            grid-area: t;
+            display: flex;
+            justify-content: center;
+            padding: 10px ;
+         }
+         .description{
+            grid-area: d;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+         }
+      }
+}
+
+
+@media screen and (max-width: 600px) {
+   .new{
+      display: flex;
+      flex-direction: column;
+   }
+}

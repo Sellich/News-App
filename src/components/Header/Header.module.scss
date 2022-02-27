@@ -1,0 +1,21 @@
+
+   .header{
+   display: grid;
+   grid-template-areas: 'news nasa spacex';
+   margin: 0 15% 0 15%;
+   height: 100%;
+      .news{
+         grid-area: news;
+      }
+      .nasa{
+         grid-area: nasa;
+      }
+      .spacex{
+         grid-area: spacex;
+      }  
+      .justify_content{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }  

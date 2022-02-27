@@ -1,0 +1,52 @@
+.wrapper{
+   display: grid;
+   grid-template-areas: 
+   "l r"
+   "l r";
+   background-color: white;
+   grid-template-columns: 1fr 1.5fr;
+   margin: 10px;
+   .left{
+      grid-area: l;
+      .img{
+         height: 100%;
+         width: 100%;
+      }
+   }
+   
+   .right{
+      grid-area: r;
+      grid-template-areas: 
+      "n "
+      "i "
+      ;
+      .name{
+         grid-area: n;
+         display: flex;
+         justify-content: center;
+      }
+      .info{
+         grid-area: i;
+         grid-template-areas: 
+         "h"
+         "d"
+         "w"
+         ;
+         padding: 10px;
+         .height{
+            grid-area: h;
+         }
+         .diameter{
+            grid-area: d;
+         }
+         .weight{
+            grid-area: w;
+         }
+      }  
+   }
+}
+
+
+
+
+
