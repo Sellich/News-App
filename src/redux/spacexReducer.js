@@ -1,33 +1,32 @@
-import { createSlice } from "@reduxjs/toolkit"
-import { spacexAPI } from "../API/SpacexAPI"
+import { createSlice } from "@reduxjs/toolkit";
+import { spacexAPI } from "../API/SpacexAPI";
 
 const spacexState = {
-   rockets: [],
-   isLoading: true,
-}
+  rockets: [],
+  isLoading: true,
+};
 
 const spacexSlice = createSlice({
-   name: "spacex",
-   initialState: spacexState,
-   reducers: {
-      setRockets(state, action) {
-         state.rockets = action.payload
-      },
-      setIsLoading(state, action) {
-         state.isLoading = action.payload
-      }
-   }
-})
+  name: "spacex",
+  initialState: spacexState,
+  reducers: {
+    setRockets(state, action) {
+      state.rockets = action.payload
+    },
+    setIsLoading(state, action) {
+      state.isLoading = action.payload
+    }
+  }
+});
 
 export const getRockets = () => async (dispatch) => {
+  let response = await spacexAPI.getRockets();
 
-   let response = await spacexAPI.getRockets()
-
-   dispatch(setIsLoading(true))
-   dispatch(setRockets(response.data))
-   dispatch(setIsLoading(false))
+  dispatch(setIsLoading(true));
+  dispatch(setRockets(response.data));
+  dispatch(setIsLoading(false));
 }
 
-export const { setRockets, setIsLoading } = spacexSlice.actions
+export const { setRockets, setIsLoading } = spacexSlice.actions;
 
-export default spacexSlice.reducer
+export default spacexSlice.reducer;

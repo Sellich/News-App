@@ -1,11 +1,11 @@
-import axios from "axios"
+import axios from "axios";
 
 const instance = axios.create({
-   baseURL: 'https://api.spacexdata.com/v4/rockets'
-})
+  baseURL: 'https://api.spacexdata.com/v4/rockets'
+});
 
 export const spacexAPI = {
-   getRockets() {
-      return instance.get().then(response => response)
-   }
-}
+  getRockets() {
+    return instance.get().then(response => response)
+  }
+};

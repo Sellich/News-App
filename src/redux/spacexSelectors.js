@@ -1,3 +1,3 @@
 export const selectGetRcokets = (state) => {
-   return state.spacex.rockets
+  return state.spacex.rockets;
 }

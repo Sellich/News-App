@@ -6,27 +6,27 @@ import { selectGetRcokets } from "../../redux/spacexSelectors";
 import Rocket from "./Rocket/Rocket";
 
 const SpaceX = () => {
+  const dispatch = useDispatch();
 
-   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getRockets())
+  }, []);
 
-   useEffect(() => {
-      dispatch(getRockets())
-   }, [])
+  const rockets = useSelector(selectGetRcokets).map((item) =>
+    <Rocket key={item.id}
+      name={item.name}
+      img={item.flickr_images}
+      height={item.height}
+      diameter={item.diameter}
+      mass={item.mass.kg}
+    />
+  );
 
-   const rockets = useSelector(selectGetRcokets).map((item) =>
-      <Rocket key={item.id}
-         name={item.name}
-         img={item.flickr_images}
-         height={item.height}
-         diameter={item.diameter}
-         mass={item.mass.kg}
-      />)
-
-   return (
-      <div>
-         {rockets}
-      </div>
-   )
+  return (
+    <div>
+      {rockets}
+    </div>
+  )
 }
 
 export default SpaceX;

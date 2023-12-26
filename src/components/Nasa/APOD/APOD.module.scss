@@ -1,27 +1,26 @@
-
-.wrapper_apod{
-   display: grid;
-   grid-template-areas: 
-   "i"
-   "t";
-   .apod_img{
-      grid-area: i;
-      .img{
-         height: 100%;
-         width: 100%;
-      }
-   }
-   .apod_info{
-      grid-area: t;
-      .title{
-         display: flex;
-         justify-content: center;
-         padding: 10px;
-      }
-      .description{
-         display: flex;
-         justify-content: center;
-         padding: 10px;
-      }
-   }
+.wrapper_apod {
+  display: grid;
+  grid-template-areas:
+    "i"
+    "t";
+  .apod_img {
+    grid-area: i;
+    .img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .apod_info {
+    grid-area: t;
+    .title {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    .description {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+  }
 }

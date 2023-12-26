@@ -1,3 +1,3 @@
 export const selectPointer = (state) => {
-   return state.welcome.pointer
-}
+  return state.welcome.pointer;
+};

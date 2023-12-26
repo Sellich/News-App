@@ -1,7 +1,7 @@
 export const selectAPOD = (state) => {
-   return state.nasa.apod
+  return state.nasa.apod;
 }
 
 export const selectIsLoadingNasa = (state) => {
-   return state.nasa.isLoading
+  return state.nasa.isLoading;
 }

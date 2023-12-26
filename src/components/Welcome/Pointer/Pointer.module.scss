@@ -1,18 +1,18 @@
-.arrow{
-   height: 50px;
-   width: 50px;
+.arrow {
+  height: 50px;
+  width: 50px;
 }
-.pointer{
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   padding: 10px 0 0 0;
-   .img{
-      display: flex;
-      justify-content: center;
-    }
-    .title{
-      display: flex;
-      justify-content: center;
-    } 
+.pointer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 0 0 0;
+  .img {
+    display: flex;
+    justify-content: center;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+  }
 }
